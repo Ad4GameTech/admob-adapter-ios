@@ -10,7 +10,7 @@
 #import "Ad4CustomEventConstants.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Ad4CustomEvent : NSObject
+@interface Ad4CustomEvent : NSObject<GADMediationAdapter>
 
 @end
 
