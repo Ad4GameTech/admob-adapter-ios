@@ -30,5 +30,6 @@ You need to add Ad4Game placements provided by the Ad4Game team to the mediation
 Custom Event screen parameters
 
 Class Name : Ad4CustomEvent
+
 Parameter : Ad4Game Unit ID
 
