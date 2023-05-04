@@ -78,6 +78,7 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 - (void)adWillPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     NSLog(@"Ad will present full screen content.");
     [_adEventDelegate willPresentFullScreenView];
+    [_adEventDelegate reportImpression];
 }
 
 /// Tells the delegate that the ad dismissed full screen content.
@@ -90,13 +91,9 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
     [_adEventDelegate reportClick];
 }
 
-- (void)adDidPresentFullScreenContent:(id<GADFullScreenPresentingAd>)ad{
-      [_adEventDelegate reportImpression];
-}
-
 - (void)presentFromViewController:(UIViewController *)viewController {
     if (_interstitialAd) {
-        [_interstitialAd presentFromRootViewController:self];
+        [_interstitialAd presentFromRootViewController:viewController];
     }
 }
 

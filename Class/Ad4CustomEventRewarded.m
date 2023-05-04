@@ -74,6 +74,9 @@
 /// Tells the delegate that the ad will present full screen content.
 - (void)adWillPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
     NSLog(@"Ad will present full screen content.");
+    [_adEventDelegate willPresentFullScreenView];
+    [_adEventDelegate didStartVideo];
+    [_adEventDelegate reportImpression];
 }
 
 - (void)adDidRecordClick:(id<GADFullScreenPresentingAd>)ad{
@@ -88,17 +91,12 @@
     [_adEventDelegate didDismissFullScreenView];
 }
 
-- (void)adDidPresentFullScreenContent:(id<GADFullScreenPresentingAd>)ad{
-    [_adEventDelegate willPresentFullScreenView];
-    [_adEventDelegate didStartVideo];
-    [_adEventDelegate reportImpression];
-}
 
 - (void)presentFromViewController:(UIViewController *)viewController{
     if (_rewardedAd) {
         [_rewardedAd presentFromRootViewController:viewController
                                       userDidEarnRewardHandler:^{
-            [self->_adEventDelegate didRewardUserWithReward:self->_rewardedAd.adReward];
+            [self->_adEventDelegate didRewardUser];
                                     }];
       }
 }

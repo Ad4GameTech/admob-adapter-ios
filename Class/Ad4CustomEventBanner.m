@@ -49,7 +49,7 @@
     };
     NSString *adUnit = adConfiguration.credentials.settings[@"parameter"];
     _bannerAd = [[GADBannerView alloc]
-          initWithAdSize:kGADAdSizeBanner];
+          initWithAdSize:GADAdSizeBanner];
     _bannerAd.adUnitID = adUnit;
     _bannerAd.delegate = self;
     [_bannerAd loadRequest:[GADRequest request]];
