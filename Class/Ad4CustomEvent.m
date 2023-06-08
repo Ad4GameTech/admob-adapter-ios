@@ -71,4 +71,8 @@
                                  completionHandler:completionHandler];
 }
 
++ (nullable Class<GADAdNetworkExtras>)networkExtrasClass {
+    return Nil;
+}
+
 @end
