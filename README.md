@@ -10,14 +10,14 @@
 
 iOS 10.0+
 
-GoogleMobileAds 9.13+
+GoogleMobileAds 10.0+
 
 
 **Installation**
 
 CocoaPods
 
-pod 'Ad4AdmobMediation',:git =>'https://github.com/Ad4GameTech/admob-adapter-ios.git'
+pod 'Ad4AdmobMediation',:git =>'https://github.com/Ad4GameTech/admob-adapter-ios.git','1.1.1'
 
 
 **Configure mediation settings for your AdMob ad unit**
