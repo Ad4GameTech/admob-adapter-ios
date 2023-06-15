@@ -17,7 +17,7 @@ GoogleMobileAds 10.0+
 
 CocoaPods
 
-pod 'Ad4AdmobMediation',:git =>'https://github.com/Ad4GameTech/admob-adapter-ios.git','1.1.1'
+pod 'Ad4AdmobMediation',:git =>'https://github.com/Ad4GameTech/admob-adapter-ios.git'
 
 
 **Configure mediation settings for your AdMob ad unit**
